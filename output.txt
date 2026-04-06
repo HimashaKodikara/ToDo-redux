@@ -1,0 +1,86 @@
+
+> todo-redux@0.0.0 test
+> vitest --run
+
+
+[1m[46m RUN [49m[22m [36mv4.1.2 [39m[90mD:/Projects/ToDo-redux[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Unhandled Errors [49m[22m[31m⎯⎯⎯⎯⎯⎯[39m
+[31m[1m
+Vitest caught 3 unhandled errors during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Unhandled Error [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+[31m[1mError[22m: [vitest-pool]: Failed to start threads worker for test files D:/Projects/ToDo-redux/src/components/TodoItem.test.jsx.[39m
+[90m [2m❯[22m node_modules/vitest/dist/chunks/cli-api.Bxr1Nn49.js:[2m3450:94[22m[39m
+[90m [2m❯[22m Pool.schedule node_modules/vitest/dist/chunks/cli-api.Bxr1Nn49.js:[2m3450:5[22m[39m
+
+[31m[1mCaused by: Error[22m: require() cannot be used on an ESM graph with top-level await. Use import() instead. To see where the top-level await comes from, use --experimental-print-required-tla.
+  From D:\Projects\ToDo-redux\node_modules\jsdom\lib\jsdom\living\css\helpers\css-values.js 
+  Requiring D:\Projects\ToDo-redux\node_modules\@asamuzakjp\css-color\dist\esm\index.js [39m
+[90m [2m❯[22m ModuleJobSync.runSync node:internal/modules/esm/module_job:[2m510:13[22m[39m
+[90m [2m❯[22m ModuleLoader.importSyncForRequire node:internal/modules/esm/loader:[2m449:47[22m[39m
+[90m [2m❯[22m loadESMFromCJS node:internal/modules/cjs/loader:[2m1577:24[22m[39m
+[90m [2m❯[22m Module._compile node:internal/modules/cjs/loader:[2m1742:5[22m[39m
+[90m [2m❯[22m Object..js node:internal/modules/cjs/loader:[2m1893:10[22m[39m
+[90m [2m❯[22m Module.load node:internal/modules/cjs/loader:[2m1480:32[22m[39m
+[90m [2m❯[22m Module._load node:internal/modules/cjs/loader:[2m1299:12[22m[39m
+[90m [2m❯[22m TracingChannel.traceSync node:diagnostics_channel:[2m328:14[22m[39m
+[90m [2m❯[22m wrapModuleLoad node:internal/modules/cjs/loader:[2m244:24[22m[39m
+[90m [2m❯[22m Module.require node:internal/modules/cjs/loader:[2m1503:12[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22m[39m
+[31m[1mSerialized Error:[22m[39m [90m{ code: 'ERR_REQUIRE_ASYNC_MODULE' }[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Unhandled Error [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+[31m[1mError[22m: [vitest-pool]: Failed to start threads worker for test files D:/Projects/ToDo-redux/src/features/todos/todosSlice.test.js.[39m
+[90m [2m❯[22m node_modules/vitest/dist/chunks/cli-api.Bxr1Nn49.js:[2m3450:94[22m[39m
+[90m [2m❯[22m Pool.schedule node_modules/vitest/dist/chunks/cli-api.Bxr1Nn49.js:[2m3450:5[22m[39m
+
+[31m[1mCaused by: Error[22m: require() cannot be used on an ESM graph with top-level await. Use import() instead. To see where the top-level await comes from, use --experimental-print-required-tla.
+  From D:\Projects\ToDo-redux\node_modules\jsdom\lib\jsdom\living\css\helpers\css-values.js 
+  Requiring D:\Projects\ToDo-redux\node_modules\@asamuzakjp\css-color\dist\esm\index.js [39m
+[90m [2m❯[22m ModuleJobSync.runSync node:internal/modules/esm/module_job:[2m510:13[22m[39m
+[90m [2m❯[22m ModuleLoader.importSyncForRequire node:internal/modules/esm/loader:[2m449:47[22m[39m
+[90m [2m❯[22m loadESMFromCJS node:internal/modules/cjs/loader:[2m1577:24[22m[39m
+[90m [2m❯[22m Module._compile node:internal/modules/cjs/loader:[2m1742:5[22m[39m
+[90m [2m❯[22m Object..js node:internal/modules/cjs/loader:[2m1893:10[22m[39m
+[90m [2m❯[22m Module.load node:internal/modules/cjs/loader:[2m1480:32[22m[39m
+[90m [2m❯[22m Module._load node:internal/modules/cjs/loader:[2m1299:12[22m[39m
+[90m [2m❯[22m TracingChannel.traceSync node:diagnostics_channel:[2m328:14[22m[39m
+[90m [2m❯[22m wrapModuleLoad node:internal/modules/cjs/loader:[2m244:24[22m[39m
+[90m [2m❯[22m Module.require node:internal/modules/cjs/loader:[2m1503:12[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22m[39m
+[31m[1mSerialized Error:[22m[39m [90m{ code: 'ERR_REQUIRE_ASYNC_MODULE' }[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Unhandled Error [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+[31m[1mError[22m: [vitest-pool]: Failed to start threads worker for test files D:/Projects/ToDo-redux/src/components/AddTodo.test.jsx.[39m
+[90m [2m❯[22m node_modules/vitest/dist/chunks/cli-api.Bxr1Nn49.js:[2m3450:94[22m[39m
+[90m [2m❯[22m Pool.schedule node_modules/vitest/dist/chunks/cli-api.Bxr1Nn49.js:[2m3450:5[22m[39m
+
+[31m[1mCaused by: Error[22m: require() cannot be used on an ESM graph with top-level await. Use import() instead. To see where the top-level await comes from, use --experimental-print-required-tla.
+  From D:\Projects\ToDo-redux\node_modules\jsdom\lib\jsdom\living\css\helpers\css-values.js 
+  Requiring D:\Projects\ToDo-redux\node_modules\@asamuzakjp\css-color\dist\esm\index.js [39m
+[90m [2m❯[22m ModuleJobSync.runSync node:internal/modules/esm/module_job:[2m510:13[22m[39m
+[90m [2m❯[22m ModuleLoader.importSyncForRequire node:internal/modules/esm/loader:[2m449:47[22m[39m
+[90m [2m❯[22m loadESMFromCJS node:internal/modules/cjs/loader:[2m1577:24[22m[39m
+[90m [2m❯[22m Module._compile node:internal/modules/cjs/loader:[2m1742:5[22m[39m
+[90m [2m❯[22m Object..js node:internal/modules/cjs/loader:[2m1893:10[22m[39m
+[90m [2m❯[22m Module.load node:internal/modules/cjs/loader:[2m1480:32[22m[39m
+[90m [2m❯[22m Module._load node:internal/modules/cjs/loader:[2m1299:12[22m[39m
+[90m [2m❯[22m TracingChannel.traceSync node:diagnostics_channel:[2m328:14[22m[39m
+[90m [2m❯[22m wrapModuleLoad node:internal/modules/cjs/loader:[2m244:24[22m[39m
+[90m [2m❯[22m Module.require node:internal/modules/cjs/loader:[2m1503:12[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22m[39m
+[31m[1mSerialized Error:[22m[39m [90m{ code: 'ERR_REQUIRE_ASYNC_MODULE' }[39m
+[31m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[39m
+
+
+[2m Test Files [22m [2mno tests[22m
+[2m      Tests [22m [2mno tests[22m
+[2m     Errors [22m [1m[31m3 errors[39m[22m
+[2m   Start at [22m 11:17:38
+[2m   Duration [22m 1.03s[2m (transform 0ms, setup 0ms, import 0ms, tests 0ms, environment 0ms)[22m
+
