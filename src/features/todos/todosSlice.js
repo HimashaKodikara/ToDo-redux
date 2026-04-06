@@ -1,7 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { fetchTodosData } from './todosAPI';
+
+export const fetchTodos = createAsyncThunk(
+  'todos/fetchTodos',
+  async () => {
+    const data = await fetchTodosData();
+    return data.map(todo => ({
+      id: todo.id.toString(),
+      text: todo.title,
+      completed: todo.completed,
+      createdAt: new Date().toISOString()
+    }));
+  }
+);
 
 const initialState = {
   items: [],
+  status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
+  error: null
 };
 
 export const todosSlice = createSlice({
@@ -29,6 +45,24 @@ export const todosSlice = createSlice({
       state.items = state.items.filter(t => !t.completed);
     }
   },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchTodos.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchTodos.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        // Add fetched todos that aren't already in the list
+        const newItems = action.payload.filter(
+          newTodo => !state.items.some(t => t.id === newTodo.id)
+        );
+        state.items = state.items.concat(newItems);
+      })
+      .addCase(fetchTodos.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      });
+  }
 });
 
 export const { addTodo, toggleTodo, removeTodo, clearCompleted } = todosSlice.actions;

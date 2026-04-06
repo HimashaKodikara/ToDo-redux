@@ -3,6 +3,24 @@ import TodoItem from './TodoItem';
 
 export default function TodoList() {
   const todos = useSelector((state) => state.todos.items);
+  const status = useSelector((state) => state.todos.status);
+  const error = useSelector((state) => state.todos.error);
+
+  if (status === 'loading') {
+    return (
+      <div className="text-center py-12 glass-panel rounded-2xl mt-6 animate-pulse">
+        <p className="text-[var(--color-text-secondary)] text-lg">Loading tasks...</p>
+      </div>
+    );
+  }
+
+  if (status === 'failed') {
+    return (
+      <div className="text-center py-12 glass-panel rounded-2xl mt-6 border border-red-500/30">
+        <p className="text-red-400">Error: {error}</p>
+      </div>
+    );
+  }
 
   if (todos.length === 0) {
     return (

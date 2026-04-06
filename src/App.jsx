@@ -1,8 +1,17 @@
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchTodos } from './features/todos/todosSlice';
 import AddTodo from './components/AddTodo';
 import TodoList from './components/TodoList';
 import { ListTodo, Sparkles } from 'lucide-react';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, [dispatch]);
+
   return (
     <div className="flex-1 w-full min-h-screen relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
       {/* Background decorations */}
